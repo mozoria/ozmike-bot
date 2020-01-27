@@ -18,7 +18,7 @@ class Confirmation extends Component {
       return (
         <div>
           <h1 className="ui centered">Confirm your Details</h1>
-          <p>Confirm the information provided is accurate</p>
+          <h3>Please Confirm The Information Provided Is Accurate</h3>
           <List>
             <List.Item>
               <List.Icon name='users' />
