@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Route } from 'react-router-dom'
-// import './App.css'
 import MainForm from '../MainForm/MainForm'
-// import { Container } from 'semantic-ui-react'
 
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from '../AutoDismissAlert/AutoDismissAlert'
@@ -12,6 +10,8 @@ import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 import Home from './Home'
+import Shoes from '../shoes/Shoes'
+import ShoeCreate from '../shoes/ShoeCreate'
 
 class App extends Component {
   constructor () {
@@ -49,6 +49,12 @@ class App extends Component {
           <Route exact path ='/' render={() => (
             <Home />
           )}/>
+          <Route exact path ='/shoes' render={() => (
+            <Shoes />
+          )}/>
+          <AuthenticatedRoute user={user} path='/create-shoe' render={() => (
+            <ShoeCreate alert={this.alert} user={user} />
+          )} />
           <Route path='/sign-up' render={() => (
             <SignUp alert={this.alert} setUser={this.setUser} />
           )} />

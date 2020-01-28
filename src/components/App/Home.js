@@ -1,44 +1,47 @@
 import React from 'react'
-import { Provider, Heading, Subhead } from 'rebass'
-import {
-  Hero, CallToAction, ScrollDownIndicator, Section, Checklist
-} from 'react-landing-page'
+import Jumbotron from 'react-bootstrap/Jumbotron'
 
-const featherCheckmark = <svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="24" height="24"
-  viewBox="0 0 24 24"
-  fill="none" stroke="currentColor"
-  strokeWidth="2"
-  strokeLinecap="round"
-  strokeLinejoin="round"
->
-  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-  <polyline points="22 4 12 14.01 9 11.01"/>
-</svg>
-
-const Home = props => (
-  <Provider>
-    <Hero
-      color="black"
-      bg="white"
-      backgroundImage="https://source.unsplash.com/jxaj-UrzQbc/1600x900"
-    >
-      <Heading>OZMIKE</Heading>
-      <Subhead>The best bot on the market</Subhead>
-      <CallToAction href="/getting-started" mt={3}>Get Started</CallToAction>
-      <ScrollDownIndicator/>
-    </Hero>
-    <Section width={1}
-      heading='Why pick this library?'
-      subhead='maybe this will help'>
-      <Checklist list= {[
-        'Open Source',
-        'React best practices',
-        'Practical API'
-      ]} checkmark={featherCheckmark}/>
-    </Section>
-  </Provider>
+const Home = () => (
+  <div className="container">
+    <Jumbotron>
+      <h1>Welcome!</h1>
+      <p>
+  The OZMIKE bot is the the fastest and most reliable bot currently on the market!
+      </p>
+    </Jumbotron>
+    <div className="row mt-5">
+      <div className="col-lg-4 mb-4 grid-margin">
+        <div className="card h-100">
+          <h4 className="card-header">Why?</h4>
+          <div className="card-body">
+            <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapien</p>
+          </div>
+          <div className="card-footer">
+          </div>
+        </div>
+      </div>
+      <div className="col-lg-4 mb-4 grid-margin">
+        <div className="card h-100">
+          <h4 className="card-header">How?</h4>
+          <div className="card-body">
+            <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+          </div>
+          <div className="card-footer">
+          </div>
+        </div>
+      </div>
+      <div className="col-lg-4 mb-4 grid-margin">
+        <div className="card h-100">
+          <h4 className="card-header">When?</h4>
+          <div className="card-body">
+            <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+          </div>
+          <div className="card-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 )
 
 export default Home
