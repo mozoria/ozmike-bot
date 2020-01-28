@@ -11,6 +11,7 @@ import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 import Home from './Home'
 import Shoes from '../shoes/Shoes'
+import Shoe from '../shoes/Shoe'
 import ShoeCreate from '../shoes/ShoeCreate'
 
 class App extends Component {
@@ -51,6 +52,9 @@ class App extends Component {
           )}/>
           <Route exact path ='/shoes' render={() => (
             <Shoes />
+          )}/>
+          <Route exact path="/shoes/:id" render={({ match, history }) => (
+            <Shoe user={user} match={match} history={history} />
           )}/>
           <AuthenticatedRoute user={user} path='/create-shoe' render={() => (
             <ShoeCreate alert={this.alert} user={user} />

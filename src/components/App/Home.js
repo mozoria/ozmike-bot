@@ -1,5 +1,6 @@
 import React from 'react'
 import Jumbotron from 'react-bootstrap/Jumbotron'
+import { Link } from 'react-router-dom'
 
 const Home = () => (
   <div className="container">
@@ -40,6 +41,9 @@ const Home = () => (
           </div>
         </div>
       </div>
+    </div>
+    <div>
+      <Link to='/shoes'><button className='btn btn-dark'>View Shoes</button></Link>
     </div>
   </div>
 )
