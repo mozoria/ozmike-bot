@@ -13,6 +13,7 @@ import Home from './Home'
 import Shoes from '../shoes/Shoes'
 import Shoe from '../shoes/Shoe'
 import ShoeCreate from '../shoes/ShoeCreate'
+import ShoeEdit from '../shoes/ShoeEdit'
 
 class App extends Component {
   constructor () {
@@ -56,6 +57,9 @@ class App extends Component {
           <Route exact path="/shoes/:id" render={({ match, history }) => (
             <Shoe user={user} match={match} history={history} />
           )}/>
+          <AuthenticatedRoute user={user} exact path='/shoes/:id/edit' render={({ match }) => (
+            <ShoeEdit match={match} alert={this.alert} user={user} />
+          )} />
           <AuthenticatedRoute user={user} path='/create-shoe' render={() => (
             <ShoeCreate alert={this.alert} user={user} />
           )} />

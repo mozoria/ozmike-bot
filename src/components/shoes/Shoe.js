@@ -43,7 +43,9 @@ class Shoe extends Component {
     return (
       <div>
         <h2>{this.state.shoe.name}</h2>
-        {this.props.user && (this.props.user._id === this.state.shoe.owner._id) &&
+        <h2>{this.props.user._id}</h2>
+        <h2>{this.state.shoe.owner._id}</h2>
+        {this.props.user && (this.props.user._id === this.state.shoe.owner) &&
             (
               <div>
                 <Link className="btn btn-primary" to={`/shoes/${this.props.match.params.id}/edit`}>Edit</Link>
