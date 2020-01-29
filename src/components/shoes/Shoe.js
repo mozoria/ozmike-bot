@@ -33,6 +33,11 @@ class Shoe extends Component {
       }
     })
       .then(this.props.history.push('/'))
+      .then(() => this.props.alert({
+        heading: 'woot woot',
+        message: 'you deleted a shoe',
+        variant: 'success'
+      }))
       .catch(console.error)
   }
 
@@ -47,7 +52,7 @@ class Shoe extends Component {
             (
               <div>
                 <Link className="btn btn-primary" to={`/shoes/${this.props.match.params.id}/edit`}>Edit</Link>
-                <button className="btn btn outline-danger" onClick={this.handleDelete}>Delete</button>
+                <button className="btn btn-danger" onClick={this.handleDelete}>Delete</button>
               </div>
             )}
       </div>
