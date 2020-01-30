@@ -2,7 +2,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import ListGroup from 'react-bootstrap/ListGroup'
 
 class Shoes extends Component {
   constructor (props) {
@@ -31,11 +30,11 @@ class Shoes extends Component {
       shoesJsx = <p>Loading...</p>
     } else {
       shoesJsx = this.state.shoes.map(shoe => (
-        <ListGroup key={shoe._id}>
+        <div className='shoelist' key={shoe._id}>
           <Link
             to={'/shoes/' + shoe._id}>{shoe.name}
           </Link>
-        </ListGroup>
+        </div>
       ))
     }
 

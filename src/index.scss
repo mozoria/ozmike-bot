@@ -2,8 +2,29 @@
 
 h1 {
   text-align: center;
+  color: white;
 }
 
-.container {
+h3 {
+  color: white;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+label {
+  color: white;
+}
+
+#root {
+  background: #000000;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
   text-align: center;
+  width: 100vw;
 }
