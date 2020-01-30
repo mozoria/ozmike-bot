@@ -30,7 +30,9 @@ class Shoes extends Component {
       shoesJsx = <p>Loading...</p>
     } else {
       shoesJsx = this.state.shoes.map(shoe => (
-        <div className='shoelist' key={shoe._id}>
+        <div className='shoeitem' key={shoe._id}>
+          <div className='test-img'>
+          </div>
           <Link
             to={'/shoes/' + shoe._id}>{shoe.name}
           </Link>
@@ -39,7 +41,9 @@ class Shoes extends Component {
     }
 
     return (
-      <ul>{shoesJsx}</ul>
+      <div className='shoelist'>
+        <ul>{shoesJsx}</ul>
+      </div>
     )
   }
 }

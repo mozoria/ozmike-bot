@@ -1,12 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
 
 h1 {
-  text-align: center;
   color: white;
+  text-align: center;
 }
 
 h3 {
   color: white;
+}
+
+label {
+  color: white;
+}
+
+body {
+  background: #000000;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .home {
@@ -15,16 +26,21 @@ h3 {
   margin-top: 100px;
 }
 
-label {
-  color: white;
+.shoeitem {
+  background: grey;
+  border: solid darkgrey;
+  display: flex;
+  font-size: 24px;
+  margin-top: 20px;
+  text-align: center;
 }
 
-#root {
-  background: #000000;
-  background-size: cover;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  width: 100vw;
+.shoelist {
+  margin-top: 200px;
+}
+
+.test-img {
+  background: pink;
+  height: 100px;
+  width: 100px;
 }
