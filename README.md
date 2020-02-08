@@ -7,7 +7,7 @@ SETUP:
 To get setup and begin using the app all you need to do is clone the Repo
 and run npm install!
 
-INSERT SCREENSHOT
+SCREENSHOT OF APP
 
 
 Links:
@@ -19,7 +19,8 @@ Back-End Repo: https://github.com/mozoria/ozmike-bot-api
 Technologies Used:
 React, Node, Express, MongoDB, Bootstrap.
 
-WIREFRAME EMBED
+WIREFRAME:
+https://imgur.com/gallery/TDlFArX
 
 As a user I want to be able sign in/out
 As a user I want to be able to sign up
